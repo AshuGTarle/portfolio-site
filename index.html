@@ -10,7 +10,11 @@
   <!-- Netflix-style Header -->
   <header class="netflix-header">
     <div class="logo"><a href="#hero">ASHUTOSH TARLE</a></div>
-    <nav class="nav-links">
+
+    <!-- Hamburger for mobile -->
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav class="nav-links" id="navLinks">
       <a href="#about">About</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
@@ -224,5 +228,8 @@
     </p>
     <p class="footer-note">© 2025 Ashutosh Tarle | Built with ❤️ in Germany</p>
   </footer>
+
+  <!-- JS for Hamburger -->
+  <script src="script.js"></script>
 </body>
 </html>
