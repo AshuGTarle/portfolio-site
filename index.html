@@ -3,113 +3,226 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ashutosh Tarle - Portfolio</title>
+  <title>Ashutosh Tarle | Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <meta name="description" content="Portfolio of Ashutosh Tarle | Project, Product & Innovation Management Specialist">
-  <meta name="keywords" content="Ashutosh Tarle, Portfolio, Product Manager, Project Manager, Innovation, Foresight">
 </head>
 <body>
-  <!-- Header / Navbar -->
-  <header class="navbar">
-    <div class="logo">Ashutosh Tarle</div>
-    <nav>
-      <a href="#profile">Profile</a>
+  <!-- Netflix-style Header -->
+  <header class="netflix-header">
+    <div class="logo"><a href="#hero">ASHUTOSH TARLE</a></div>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
       <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact">Contact</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#volunteer">Volunteer Work</a>
+      <a href="https://www.linkedin.com/in/ashutosh-tarle/" target="_blank" class="btn-red">LinkedIn</a>
+      <a href="https://github.com/AshuGTarle" target="_blank" class="btn-red">GitHub</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="profile">
-    <div class="hero-content">
+  <!-- Hero Section (50/50 Split) -->
+  <section id="hero" class="hero">
+    <div class="hero-left"></div> <!-- Background image handled in CSS -->
+    <div class="hero-right">
       <h1>Hello, I’m Ashutosh 👋</h1>
-      <p>Project, Product & Innovation Management Specialist<br>
-         M.Sc Global Foresight & Technology Management</p>
-      <a href="mailto:tarleashutosh@gmail.com" class="btn">Hire Me</a>
+      <h2>Project, Product & Innovation Management Specialist</h2>
+      <p class="description">
+        I’m passionate about driving innovation, foresight, and technology management 
+        to create meaningful business impact and sustainable solutions.
+      </p>
+      <a href="#contact" class="btn">Hire Me</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="about-left">
+      <h1>About Me</h1>
+    </div>
+    <div class="about-right">
+      <p>
+        I grew up with a natural sense of curiosity, always eager to explore how things worked. Whether it was tinkering with gadgets or 
+        asking endless questions, I enjoyed solving problems and finding creative ways to make sense of the world around me.
+      </p>
+      <p>
+        Over time, this curiosity developed into a love for learning and a drive to take on new challenges. From my studies to my early 
+        experiences in engineering, I discovered not only the technical side of problem-solving but also the importance of teamwork, 
+        resilience, and adaptability. These skills helped me to collaborate with diverse groups of people and grow as a communicator and leader.
+      </p>
+      <p>
+        Moving abroad for my master’s studies was a turning point. It pushed me out of my comfort zone, taught me independence, and gave me 
+        the confidence to embrace uncertainty. I learned how to connect big-picture thinking with practical solutions, balancing foresight 
+        with hands-on execution.
+      </p>
+      <p>
+        Today, I see myself as someone who combines curiosity, empathy, and a forward-looking mindset. My journey has been less about titles 
+        or positions and more about learning, adapting, and helping ideas grow into real impact. That mindset continues to guide me in both 
+        my personal and professional life.
+      </p>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="education-right">
+      <h1>Education</h1>
+    </div>
+    <div class="education-left">
+      <!-- Master's Degree -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>
+            Master of Science in 
+            <span class="program-link">
+              <a href="https://www.thi.de/en/engineering-and-management/degree-programmes/global-foresight-and-technology-management-msc/" target="_blank">
+                Global Foresight & Technology Management
+              </a>
+              <img src="images/thi-logo.png" alt="THI Logo" class="logo">
+            </span>
+          </h2>
+          <p>
+            <span class="university">Technische Hochschule Ingolstadt</span>, 
+            <span class="location">Germany</span> 
+            | <span class="status">Mar 2023 – Sep 2025</span>
+          </p>
+          <h3>Modules</h3>
+          <ul>
+            <li><span class="cluster">Cluster 1: Foresight</span> – Strategic Foresight and Trend Analysis, Scenario Technique, Trendreceiver Method, Visioning, Delphi, Science Fiction Analysis</li>
+            <li><span class="cluster">Cluster 2: Technology</span> – Innovation Management, Design Thinking, Open Innovation, Technology Portfolio Analysis, Product Lifecycle Management</li>
+            <li><span class="cluster">Cluster 3: Economics</span> – Future Business Modelling, Digital Business Models, Risk Management, Entrepreneurship</li>
+            <li><span class="cluster">Cluster 4: Social Aspects</span> – Change Management, Technology Assessment, CSR, Intercultural Leadership</li>
+            <li><span class="cluster">Cluster 5: Integrative</span> – Research Methods, Scientific Research Seminar, Electives (CSR, Project Studies, Supply Chain, Automotive)</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bachelor's Degree -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>Bachelor of Engineering in Electrical Engineering</h2>
+          <p><strong>Savitribai Phule Pune University, India</strong> | 2014 – 2018</p>
+          <p>Focused on electrical systems, applied engineering practices, and control systems.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Experience Section -->
-  <section class="row" id="experience">
-    <h2>Professional Experience</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Vodafone Group Services GmbH</h3>
-        <p><b>Intern – Product Management (08/2024 – 02/2025)</b></p>
-        <ul>
-          <li>Analyzed Smart Tech product performance across 10+ markets.</li>
-          <li>Developed KPI dashboards for 8 regions → +20% accuracy.</li>
-          <li>Coordinated 3 Program Increments & 12+ sprints (SAFe 6.0).</li>
-        </ul>
+  <section id="experience" class="experience-section">
+    <div class="experience-right">
+      <h1>Experience</h1>
+    </div>
+    <div class="experience-left">
+      <!-- Vodafone Internship -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>Product Management Intern – Vodafone Group Services GmbH</h2>
+          <p>
+            <span class="location">Düsseldorf, Germany</span> 
+            | <span class="status">Apr 2024 – Sep 2024</span>
+          </p>
+          <ul>
+            <li>Supported product management activities across Smart Tech markets with a focus on performance analysis and portfolio research.</li>
+            <li>Contributed to agile delivery processes including sprint planning, backlog refinement, and program increment coordination.</li>
+            <li>Assisted in competitive benchmarking and market research to align product strategies with customer needs and trends.</li>
+            <li>Collaborated with cross-functional teams using tools such as Jira, Confluence, and Power BI for project documentation and reporting.</li>
+          </ul>
+        </div>
       </div>
-      <div class="card">
-        <h3>ABB Limited</h3>
-        <p><b>Graduate Engineer Trainee (06/2022 – 01/2023)</b></p>
-        <ul>
-          <li>Led customer-focused switchgear projects, reducing size by 10%.</li>
-          <li>Customized SCADA software → -25% installation time.</li>
-          <li>Improved customer journey mapping & workflows.</li>
-        </ul>
+
+      <!-- Advent Engineers -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h2>Assistant Manager – Advent Engineers</h2>
+          <p>
+            <span class="location">Nashik, India</span> 
+            | <span class="status">Aug 2019 – Jul 2022</span>
+          </p>
+          <ul>
+            <li>Planned, scheduled, and monitored multiple production projects ensuring alignment with organizational objectives.</li>
+            <li>Coordinated with vendors and stakeholders to manage requirements, track progress, and resolve operational challenges.</li>
+            <li>Prepared and maintained reports, trackers, and documentation to support project reviews and decision-making.</li>
+            <li>Facilitated meetings, documented minutes, and ensured timely follow-up for effective project execution.</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section class="row" id="projects">
-    <h2>Key Projects</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Future E-Commerce 2035</h3>
-        <p>Trend analysis for MediaMarktSaturn, built omnichannel strategies.</p>
-      </div>
-      <div class="card">
-        <h3>Bias in AI-Generated Imagery</h3>
-        <p>Framework to detect stereotypes in AI visuals using analytics.</p>
-      </div>
-      <div class="card">
-        <h3>Future Compass Toolbox</h3>
-        <p>Built foresight-driven analytics framework for SMEs in Germany.</p>
-      </div>
-      <div class="card">
-        <h3>Smart Tech for Travel</h3>
-        <p>IoT, AI & VR assessments for smart travel solutions (Gharage).</p>
-      </div>
+  <!-- Certifications Section (GRID) -->
+  <section id="certifications" class="certifications-section">
+    <h1>Certifications</h1>
+    <p class="subtitle">Professional certifications showcasing my skills and expertise.</p>
+
+    <div class="certifications-grid">
+      <!-- AWS -->
+      <a href="https://www.credly.com/badges/91e4eda9-1d79-44aa-8a31-b6a85f14ccae" target="_blank" class="cert-card">
+        <img src="images/aws-placeholder.png" alt="AWS Certification">
+        <p>AWS Certified Cloud Practitioner</p>
+      </a>
+
+      <!-- SAFe PO/PM -->
+      <a href="#" target="_blank" class="cert-card">
+        <img src="images/safe-placeholder.png" alt="SAFe PO/PM Certification">
+        <p>Certified SAFe® 6 Product Owner/Product Manager</p>
+      </a>
+
+      <!-- CAPM -->
+      <a href="https://www.credly.com/badges/a332ec85-d6d4-41ce-af72-fac1886e6e60" target="_blank" class="cert-card">
+        <img src="images/capm-placeholder.png" alt="CAPM Certification">
+        <p>Certified Associate in Project Management (CAPM)®</p>
+      </a>
+
+      <!-- PSM I -->
+      <a href="https://www.credly.com/badges/47c37dc5-2063-4071-b71c-dabf90caf275" target="_blank" class="cert-card">
+        <img src="images/psm-placeholder.png" alt="PSM I Certification">
+        <p>Professional Scrum Master™ I (PSM I)</p>
+      </a>
+
+      <!-- Google Project Management -->
+      <a href="https://www.coursera.org/account/accomplishments/specialization/NSCU8G3F62M6" target="_blank" class="cert-card">
+        <img src="images/google-pm-placeholder.png" alt="Google Project Management Certification">
+        <p>Google Project Management (Coursera)</p>
+      </a>
     </div>
   </section>
 
-  <!-- Certificates Section -->
-  <section class="row" id="certificates">
-    <h2>Certificates</h2>
-    <div class="cards">
-      <div class="card">SAFe Product Owner & Product Manager (SAFe PO/PM)</div>
-      <div class="card">Certified Associate in Project Management (CAPM)</div>
-      <div class="card">Professional Scrum Master (PSM I)</div>
-      <div class="card">Google Project Management Specialization</div>
-      <div class="card">Python Data Structures (University of Michigan)</div>
-      <div class="card">Six Sigma White Belt</div>
+  <!-- Volunteer Section -->
+  <section id="volunteer" class="volunteer-section">
+    <h1>Volunteer Work</h1>
+    <p class="subtitle">Nonprofit initiatives and leadership roles</p>
+
+    <div class="volunteer-grid">
+      <!-- Swapnapurti Foundation -->
+      <a href="https://swapnapurti.org/" target="_blank" class="volunteer-card">
+        <img src="swapnapurti.png" alt="Swapnapurti Foundation Logo">
+        <p>Volunteer <br><span>Swapnapurti Foundation</span></p>
+      </a>
+
+      <!-- Vedat e.V. -->
+      <a href="https://vedat-ev.com/" target="_blank" class="volunteer-card">
+        <img src="vedat.png" alt="Vedat e.V. Logo">
+        <p>Vice Chair & CTO <br><span>Vedat e.V.</span></p>
+      </a>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section class="contact" id="contact">
-    <h2>Contact</h2>
+  <footer id="contact">
+    <h3>Contact</h3>
     <p>Email: <a href="mailto:tarleashutosh@gmail.com">tarleashutosh@gmail.com</a></p>
     <p>Phone: <a href="tel:+4915758163930">+49 1575 8163930</a></p>
     <p>
-      <a href="https://linkedin.com/in/ashutosh-tarle" target="_blank">LinkedIn</a> | 
+      <a href="https://www.linkedin.com/in/ashutosh-tarle/" target="_blank">LinkedIn</a> | 
       <a href="https://github.com/AshuGTarle" target="_blank">GitHub</a> | 
       <a href="https://vedat-ev.com/" target="_blank">Vedat e.V.</a>
     </p>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 Ashutosh Tarle | Built with ❤️ in Germany</p>
+    <p class="footer-note">© 2025 Ashutosh Tarle | Built with ❤️ in Germany</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

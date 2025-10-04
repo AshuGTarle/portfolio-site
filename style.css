@@ -1,86 +1,528 @@
-body {
+/* Reset */
+* {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #141414;
-  color: #fff;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar {
+body {
+  font-family: Arial, sans-serif;
+  background-color: #141414; /* Netflix black */
+  color: #ffffff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding-top: 80px; /* Space for fixed navbar */
+}
+
+/* Make sure sections don’t hide under header when clicked */
+section {
+  scroll-margin-top: 100px; /* offset for fixed header */
+  padding: 80px 60px;
+}
+
+/* Netflix Header */
+.netflix-header {
   display: flex;
   justify-content: space-between;
-  padding: 15px 30px;
-  background: #000;
+  align-items: center;
+  padding: 20px 50px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 10%, transparent);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
 }
 
-.navbar .logo {
-  font-size: 22px;
+.netflix-header .logo a {
+  font-size: 2.4rem;
   font-weight: bold;
+  color: #e50914; /* Netflix red */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
   color: #e50914;
 }
 
-.navbar nav a {
-  margin: 0 15px;
-  color: #fff;
+/* Netflix-style Button (LinkedIn + GitHub) */
+.btn-red {
+  background: #e50914;
+  color: #fff !important;
+  padding: 6px 14px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s;
 }
 
+.btn-red:hover {
+  background: #b20710;
+}
+
+/* Hero Section */
 .hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(to bottom, #000, #141414);
+  display: flex;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
-.hero h1 { font-size: 40px; }
-.hero p { font-size: 18px; margin: 10px 0; }
+.hero-left {
+  flex: 1;
+  background: url("ashutosh.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+.hero-left::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(20,20,20,0) 0%, rgba(17,17,17,0.95) 100%);
+  pointer-events: none;
+}
+
+.hero-right {
+  flex: 1;
+  background-color: rgba(17, 17, 17, 0.95);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px;
+  z-index: 1;
+}
+
+.hero-right h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-right h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #ccc;
+}
+
+.hero-right .description {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
 
 .btn {
   display: inline-block;
-  margin-top: 20px;
   padding: 10px 20px;
   background: #e50914;
   color: #fff;
+  text-decoration: none;
   border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #b20710;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.about-left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-left h1 {
+  color: #e50914;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.about-right {
+  flex: 2;
+  color: #ccc;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  max-width: 900px;
+  padding-left: 40px;
+  text-align: justify;
+}
+
+.about-right p {
+  margin-bottom: 20px;
+}
+
+/* Education Section */
+.education-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  gap: 50px;
+}
+
+.education-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.education-right h1 {
+  color: #e50914;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.education-left {
+  flex: 3;
+  position: relative;
+  padding-left: 40px;
+  border-left: 3px solid #e50914;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: #e50914;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.timeline-content {
+  margin-left: 20px;
+  padding: 15px 20px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+/* Highlight effect on scroll/hover */
+.timeline-content:hover {
+  transform: scale(1.03);
+  border: 2px solid #e50914;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+}
+
+.timeline-content h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.timeline-content p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  list-style: disc;
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.timeline-content ul li {
+  margin-bottom: 8px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Cluster Highlight */
+.timeline-content .cluster {
+  color: #e50914;
+  font-weight: bold;
+}
+
+.program-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.program-link a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.program-link a:hover {
+  color: #e50914;
+}
+
+.logo {
+  width: 35px;
+  height: auto;
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Experience Section */
+.experience-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 100vh;
+  gap: 50px;
+}
+
+.experience-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-right h1 {
+  color: #e50914;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.experience-left {
+  flex: 3;
+  position: relative;
+  padding-left: 40px;
+  border-left: 3px solid #e50914;
+}
+
+.experience-left .timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.experience-left .timeline-dot {
+  position: absolute;
+  left: -12px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background: #e50914;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.experience-left .timeline-content {
+  margin-left: 20px;
+  padding: 15px 20px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+}
+
+/* Highlight effect on scroll/hover */
+.experience-left .timeline-content:hover {
+  transform: scale(1.03);
+  border: 2px solid #e50914;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+}
+
+.experience-left .timeline-content h2 {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.experience-left .timeline-content p {
+  color: #ccc;
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.experience-left .timeline-content ul {
+  list-style: disc;
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.experience-left .timeline-content ul li {
+  margin-bottom: 8px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Certifications Section (GRID now instead of scroll) */
+.certifications-section h1 {
+  color: #e50914;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.certifications-section .subtitle {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.cert-card {
+  background: #1c1c1c;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 260px;
+}
+
+.cert-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: contain;
+  background: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px;
+}
+
+.cert-card p {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.cert-card:hover {
+  transform: scale(1.08);
+  border: 2px solid #e50914;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+}
+
+/* Volunteer Section */
+.volunteer-section {
+  padding: 80px 60px;
+}
+
+.volunteer-section h1 {
+  color: #e50914;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.volunteer-section .subtitle {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.volunteer-grid {
+  display: flex;
+  gap: 20px;
+}
+
+.volunteer-card {
+  flex: 1; /* half-half layout */
+  background: #1c1c1c;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.volunteer-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #fff;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  padding: 10px;
+}
+
+.volunteer-card p {
+  padding: 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.volunteer-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+.volunteer-card:hover {
+  transform: scale(1.05);
+  border: 2px solid #e50914;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.5);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 40px;
+  background: #000;
+  margin-top: 50px;
+}
+
+footer h3 {
+  color: #e50914;
+  margin-bottom: 10px;
+}
+
+footer a {
+  color: #e50914;
   text-decoration: none;
 }
 
-.row {
-  margin: 40px 20px;
+footer a:hover {
+  text-decoration: underline;
 }
 
-.row h2 {
-  margin-bottom: 15px;
-  color: #e5e5e5;
-}
-
-.cards {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding-bottom: 10px;
-}
-
-.card {
-  background: #222;
-  padding: 20px;
-  border-radius: 8px;
-  min-width: 250px;
-  max-width: 300px;
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-.contact {
-  padding: 40px;
-  text-align: center;
-  background: #000;
-}
-
-footer {
-  background: #111;
-  text-align: center;
-  padding: 15px;
-  font-size: 14px;
+.footer-note {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #aaa;
 }
